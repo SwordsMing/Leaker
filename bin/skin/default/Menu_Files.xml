@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bktrans="true" size="120,82">
+ <Font name="宋体" size="13" bold="false"/>
+ <Font name="宋体" size="12"/>
+<VerticalLayout bkimage="file='menu_bk.png' corner='40,8,8,8'" hole="false">
+	<List header="hidden" inset="8,8,8,8" itemhotimage="file='menu_hot_bk.png' corner='2,2,2,2'" itemdisabledbkcolor="#20000000">
+		<ListContainerElement name="menu_Open" height="22" inset="40,0,0,0">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Open..."/>
+				<Label text="Ctrl+O"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_Mark" height="22" inset="40,0,0,0">
+			<HorizontalLayout>
+				<Label text="Open Recent"/>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+					bkimage="file='treeview_a.png' source='0,0,16,16'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_Delete" height="22" inset="40,0,0,0">
+			<Label text="Merge..." mouse="false"/>
+		</ListContainerElement>
+		<ListContainerElement>
+			<Label text="Import From Hex Dump..." />
+		</ListContainerElement>
+		<ListContainerElement>
+			
+		</ListContainerElement>
+	</List>
+</VerticalLayout>
+</Window>

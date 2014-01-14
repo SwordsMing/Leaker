@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bktrans="true" size="250,150">
+<Font name="宋体" size="20" bold="false"/>
+<Font name="宋体" size="19"/>
+<VerticalLayout hole="false" bkcolor="0xFFF2F2F2">
+	<List name="menu_capture" header="hidden" inset="8,8,8,8" bordersize="1" bordercolor="0xFFF2F2F2" itemhotimage="file='menu_hot_bk.png' corner='2,2,2,2'" itemdisabledbkcolor="#20000000">
+		<ListContainerElement name="menu_Interfaces" height="22">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Interfaces..." width="155" aligh="left"/>
+				<Label text="Ctrl+I" aligh="right"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_Options" height="22">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Options..." width="155" aligh="left"/>
+				<Label text="Ctrl+K" aligh="right"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_Start" height="22">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Start" width="155" aligh="left"/>
+				<Label text="Ctrl+E" aligh="right"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_Stop" height="22">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Stop" width="155" aligh="left"/>
+				<Label text="Ctrl+E" aligh="right"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_restart" height="22">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Restart" width="155" aligh="left"/>
+				<Label text="Ctrl+R" aligh="right"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_captureFilter" height="22">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Capture Filters..." width="155" aligh="left"/>
+				<Label text="Ctrl+R" aligh="right"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_refresh" height="22">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Refresh Interfaces" width="155" aligh="left"/>
+				<Label text="Ctrl+R" aligh="right"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+	</List>
+</VerticalLayout>
+</Window>
