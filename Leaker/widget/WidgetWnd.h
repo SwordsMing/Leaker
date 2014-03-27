@@ -18,14 +18,16 @@ using std::string;
 using std::multimap;
 using std::pair;
 
-class WidgetWnd: public CWindowWnd,public INotifyUI
+class WidgetWnd: public CWindowWnd,public INotifyUI,public IDialogBuilderCallback
 {
 public:
+	virtual ~WidgetWnd(){}
 	void Notify(TNotifyUI& msg);
 	virtual void onCloseBtn(TNotifyUI&msg);
 	void onMaxBtn(TNotifyUI& msg);
 	void onMinBtn(TNotifyUI& msg);
 	void onRestoreBtn(TNotifyUI & msg);
+	CControlUI* CreateControl(LPCTSTR pstrClass);
 	CPaintManagerUI paintManager_;
 protected:
 	//控件事件回调函数对象

@@ -94,6 +94,8 @@ protected:
     CStdString m_sPushedImage;
     CStdString m_sFocusedImage;
     CStdString m_sDisabledImage;
+
+	bool m_bMouseOver;    
 };
 
 

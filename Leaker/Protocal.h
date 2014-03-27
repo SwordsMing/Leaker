@@ -8,10 +8,6 @@
 
 #pragma pack(push,1)
 
-//该函数判断MAC帧类型 802.3 or DIX Ethernet V2
-inline void getMacType(unsigned short rhs){
-	
-}
 //以下为TCP/IP协议体系中各层协议的特征字
 
 #define MAC		  0X0001
@@ -32,6 +28,7 @@ inline void getMacType(unsigned short rhs){
 #define IGP  9
 #define OSPF 89
 #define IPV6 41
+#define DNS  53
 
 //封装在TCP帧中的应用层协议－基于TCP头中的端口号
 #define HTTP 80
@@ -132,7 +129,7 @@ typedef struct tagEthe_SNAP
  {
 	unsigned short	Src_Port;			  //源端口号
 	unsigned short	Des_Port;			  //目的端口号
-	unsigned long   Num;
+	unsigned long   Num;                  //sequence number
 	unsigned long   Ack_Num;
 	unsigned short  Conp;                 //数据偏移，保留，控制位
     unsigned short  Window;
@@ -223,6 +220,7 @@ typedef struct tagPacketInfo
 	unsigned int len_;
 	unsigned int caplen_;
 	unsigned short nCurProt;
+	struct pcap_pkthdr header_;
 	ColumnInfo columnInfo_;
 	std::vector<RootedTree<std::string>* > detailInfo_;
 

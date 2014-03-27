@@ -1,4 +1,5 @@
 #include "PluginManager.h"
+#include <string>
 
 PluginManager::PluginManager(){
 	
@@ -18,7 +19,7 @@ void PluginManager::registerPlugins(){
 
 	char szPluginPath[MAX_PATH] = {0};
 	::GetCurrentDirectory(MAX_PATH,szPluginPath);
-	strcat(szPluginPath,_T("\\plugin\\*.dll"));
+	strcat(szPluginPath,_T("\\Plugin\\*.dll"));
 	WIN32_FIND_DATA FindFileData;
 	HANDLE hFind;
 	BOOL res = 1;
@@ -26,8 +27,13 @@ void PluginManager::registerPlugins(){
 	if(hFind == INVALID_HANDLE_VALUE){
 		return;
 	}
+	memset(szPluginPath,0,sizeof(szPluginPath));
+	::GetCurrentDirectory(MAX_PATH,szPluginPath);
+	strcat(szPluginPath,_T("\\Plugin\\"));
+	std::string Path = szPluginPath;
 	while (res){
-		HMODULE hModule = ::LoadLibrary(FindFileData.cFileName);
+		std::string fullPath = Path + FindFileData.cFileName;
+		HMODULE hModule = ::LoadLibrary(fullPath.c_str());
 		if(hModule==NULL){
 			return ;
 		}
@@ -47,6 +53,7 @@ void PluginManager::registerModule(HMODULE hModule){
 	pfn_Register = (registerPlugin)::GetProcAddress(hModule,_T("registerPlugin"));
 	if( NULL != pfn_Register)
 	{
+		//::MessageBox(NULL,"call registerPlugin" ,NULL,MB_OK);
 		pfn_Register(&registerPtotocalInfo);  //µ÷ÓÃ×¢²áº¯Êý
 	}
 }

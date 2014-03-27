@@ -1,17 +1,20 @@
 #include "WidgetWnd.h"
 #include <boost/bind.hpp>
-#include "../ControlExt/TreeView.h"
+//#include "../ControlExt/UITreeView.h"
+#include "../ControlExt/treeview.hpp"
+#include "../ControlExt/UICheckBox.h"
+#include "../ControlExt/UIWebBrowser.h"
 
 LRESULT WidgetWnd::onCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled){
 	paintManager_.Init(m_hWnd);
     CDialogBuilder builder;
-	CDialogBuilderCallbackEx cb;
-    CControlUI* pRoot = builder.Create(getWidgetXml(),(UINT)0,&cb, &paintManager_);
+    CControlUI* pRoot = builder.Create(getWidgetXml(),(UINT)0,static_cast<IDialogBuilderCallback*>(this), &paintManager_);
     ASSERT(pRoot && "Failed to parse XML");
     paintManager_.AttachDialog(pRoot);
     paintManager_.AddNotifier(this);
 
 	registerEvent(DUI_CLICK,_T("closeBtn"),boost::bind(&WidgetWnd::onCloseBtn,this,_1));
+
 	init();
 
 	return 0L;
@@ -183,6 +186,14 @@ void WidgetWnd::Notify(TNotifyUI &msg){
 			it_++;
 		}
 	}
+}
+
+CControlUI* WidgetWnd::CreateControl(LPCTSTR pstrClass){
+	
+	if( _tcscmp(pstrClass, _T("TreeView")) == 0 ) return new CTreeViewUI;
+	//else if(_tcscmp(pstrClass,_T("CheckBox"))== 0) return new CCheckBoxUI;
+	else if( _tcscmp(pstrClass,_T("WebBrowser")) == 0 )return new CWebBrowserUI;
+    return NULL;
 }
 
 void WidgetWnd::onCloseBtn(TNotifyUI&msg){

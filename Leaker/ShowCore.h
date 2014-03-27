@@ -8,7 +8,8 @@
 #include <string>
 #include "Protocal.h"
 #include "ShowCore.h"
-#include "ControlExt/TreeView.h"
+//#include "ControlExt/UITreeView.h"
+#include "ControlExt/treeview.hpp"
 #include "widget/WidgetWnd.h"
 #include <utility>
 
@@ -56,6 +57,9 @@ private:
 	void showTreeInfo(const PacketInfo * pkt);
 	void showHexInfo(const PacketInfo * pkt);
 	void addTreeInfo(const RootedTree<std::string> * info);
+
+	//创建一个树结点
+	//CTreeNodeUI* createTreeNode(LPCTSTR str);
 };
 
 

@@ -1,6 +1,7 @@
 #include "ProtocalManager.h"
 #include "ProtocalDissector.h"
 #include <queue>
+#include <utility>
 using std::queue;
 
 ProtocalManager::ProtocalManager():m_ProtocalTree(NULL){
@@ -125,3 +126,25 @@ void ProtocalManager::Register_Ptotocal(const char *prot_name, unsigned int uppe
 	}
 	Add_New_Node(&temp->next,prot_name,feature,pfn);
 }
+
+void ProtocalManager::addPtotocalFeature(unsigned short feature,std::string name){
+
+	protocalFeature_.insert(std::pair<unsigned short,std::string>(feature,name));
+}
+
+bool ProtocalManager::isExisting(unsigned short feature){
+
+	std::map<unsigned short,std::string>::iterator it_ = protocalFeature_.find(feature);
+	return (it_== protocalFeature_.end()) ? false : true;
+}
+
+const char * ProtocalManager::getProtocalName(unsigned short feature){
+
+	std::map<unsigned short,std::string>::iterator it_  = protocalFeature_.find(feature);
+	if(it_!= protocalFeature_.end()){
+		return (it_->second).c_str();
+	}
+	return NULL;
+
+}
+	

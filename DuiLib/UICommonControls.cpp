@@ -205,7 +205,7 @@ void CLabelUI::PaintText(HDC hDC)
 //
 //
 
-CButtonUI::CButtonUI() : m_uButtonState(0), m_dwHotTextColor(0), m_dwPushedTextColor(0), m_dwFocusedTextColor(0)
+CButtonUI::CButtonUI() : m_uButtonState(0), m_dwHotTextColor(0), m_dwPushedTextColor(0), m_dwFocusedTextColor(0),m_bMouseOver(false)
 
 {
     m_uTextStyle = DT_SINGLELINE | DT_VCENTER | DT_CENTER;
@@ -288,14 +288,28 @@ void CButtonUI::DoEvent(TEventUI& event)
         if( IsEnabled() ) {
             m_uButtonState |= UISTATE_HOT;
             Invalidate();
-        }
-        return;
+			if(!m_bMouseOver){
+				m_bMouseOver = true;
+				//自处理消息  zc 20140323
+				m_pManager->SendNotify(this, _T("mouseenter"), event.wParam, event.lParam,true);
+				// 
+				
+			}
+        }      
+		return;
     }
     if( event.Type == UIEVENT_MOUSELEAVE )
     {
         if( IsEnabled() ) {
             m_uButtonState &= ~UISTATE_HOT;
             Invalidate();
+			if(m_bMouseOver){
+				m_bMouseOver = false;
+				//自处理消息  zc 20140323
+				m_pManager->SendNotify(this, _T("mouseleave"), event.wParam, event.lParam,true);
+				//
+				
+			}
         }
         return;
     }

@@ -56,13 +56,19 @@ LRESULT MenuCaptureWnd::MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, 
 
 LRESULT MenuCaptureWnd::onKillFocus(UINT uMsg, WPARAM wParam, LPARAM lParam){
 	
-	  if(m_hWnd != (HWND) wParam ) PostMessage(WM_CLOSE);
-        return 0;
+	if(m_hWnd != (HWND) wParam ){
+		owner_->disableMenuActive();
+		PostMessage(WM_CLOSE);
+	}
+    return 0;
 }
 
 LRESULT MenuCaptureWnd::onKeyDown(UINT uMsg, WPARAM wParam, LPARAM lParam){
-      if( wParam == VK_ESCAPE ) Close();
-      return 0;
+	if( wParam == VK_ESCAPE ){
+		owner_->disableMenuActive();
+		Close();
+	}
+    return 0;
 }
 
 void MenuCaptureWnd::onSelectItem(TNotifyUI& msg){

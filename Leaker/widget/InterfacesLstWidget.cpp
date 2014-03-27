@@ -65,19 +65,23 @@ void InterfacesLstWidget::initInterfacesLst(){
 		pDevLab->SetText(pcap_->name);
 		pDevLab->SetAttribute(_T("height"),_T("20"));
 		pDevLab->SetAttribute(_T("padding"),_T("0,10,0,0"));
+		pDevLab->SetAttribute(_T("textcolor"),_T("0XFFFFFFFF"));
+
 		pDesLab->SetAttribute(_T("width"),_T("100"));
 		pDesLab->SetAttribute(_T("height"),_T("20"));
 		pDesLab->SetAttribute(_T("padding"),_T("0,10,0,0"));
 		pDesLab->SetText(pcap_->description);
+		pDesLab->SetAttribute(_T("textcolor"),_T("0XFFFFFFFF"));
 
 		pDetailBtn->SetAttribute(_T("padding"),_T("0,10,0,0"));
 		pDetailBtn->SetAttribute(_T("name"),_T("detailsBtn"));
 		pDetailBtn->SetText(_T("Details"));
+		pDetailBtn->SetAttribute(_T("textcolor"),_T("0XFFFFFFFF"));
 		pDetailBtn->SetAttribute(_T("height"),_T("20"));
 		pDetailBtn->SetAttribute(_T("width"),_T("60"));
-		pDetailBtn->SetAttribute(_T("normalimage"),_T("file='white_btn.png' source='0,0,71,28' corner='2,2,2,5'"));
-		pDetailBtn->SetAttribute(_T("hotimage"),_T("file='white_btn.png' source='0,28,71,56' corner='2,2,2,5'"));
-		pDetailBtn->SetAttribute(_T("pushedimage"),_T("file='white_btn.png' source='0,56,71,84' corner='2,2,2,5'"));
+		pDetailBtn->SetAttribute(_T("bkcolor"),_T("#FF363636"));
+		pDetailBtn->SetAttribute(_T("bordersize"),_T("1"));
+		pDetailBtn->SetAttribute(_T("borderround"),_T("3,3"));
 
 		pHorElement->Add(pOption);
 		pHorElement->Add(pDevLab);
@@ -88,6 +92,7 @@ void InterfacesLstWidget::initInterfacesLst(){
 		pHorElement->Add(pDetailBtn);
 
 		pHorElement->SetAttribute(_T("height"),_T("20"));
+		pHorElement->SetAttribute(_T("bkcolor"),_T("#FF000000"));
 		pLstElement->Add(pHorElement);
 		interfacesLstUI_->Add(pLstElement);
 	}

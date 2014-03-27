@@ -1,36 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Window bktrans="true" size="250,150">
-<Font name="宋体" size="20" bold="false"/>
-<Font name="宋体" size="19"/>
-<VerticalLayout hole="false" bkcolor="0xFFF2F2F2">
-	<List name="menu_capture" header="hidden" inset="8,8,8,8" bordersize="1" bordercolor="0xFFF2F2F2" itemhotimage="file='menu_hot_bk.png' corner='2,2,2,2'" itemdisabledbkcolor="#20000000">
-		<ListContainerElement name="menu_Interfaces" height="22">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window bktrans="true" size="240,160" roundcorner="2,2" >
+<Font name="微软雅黑" size="14" bold="false" italic="false" />
+<Font name="微软雅黑" size="14" bold="true" italic="false" />
+<VerticalLayout bkcolor="#FF000000" bordersize="1" bordercolor="#FF1B1B1B"> 
+	<List name="menu_capture" 
+		itemendellipsis="true"
+		header="hidden"
+		itemhotbkcolor="#FF1B1B1B" 
+		itemselectedbkcolor="#FF151C2C"
+		itemtextcolor="#FFFFFFFF"
+		>
+		<ListContainerElement name="menu_Interfaces" height="25" padding="0,2,0,0" >
 			<HorizontalLayout>
 				<Control
 					padding="5,4,5,0"
-					mouse="false"
 					width="16"
 					height="16"
+					mouse="false"
 					bkimage="file='menu_fav.png'"
-				/>
-				<Label text="Interfaces..." width="155" aligh="left"/>
-				<Label text="Ctrl+I" aligh="right"/>
+					/>
+				
+				<Label text="Interfaces...               Ctrl+I"  mouse="false" textcolor="0XFFFFFFFF" />
 			</HorizontalLayout>
 		</ListContainerElement>
-		<ListContainerElement name="menu_Options" height="22">
+		<ListContainerElement name="menu_Options" height="25" padding="0,2,0,0">
 			<HorizontalLayout>
 				<Control
 					padding="5,4,5,0"
-					mouse="false"
 					width="16"
 					height="16"
+					mouse="false"
 					bkimage="file='menu_fav.png'"
 				/>
-				<Label text="Options..." width="155" aligh="left"/>
-				<Label text="Ctrl+K" aligh="right"/>
+				<Label text="Options...                  Ctrl+K" mouse="false" textcolor="0XFFFFFFFF" />
 			</HorizontalLayout>
 		</ListContainerElement>
-		<ListContainerElement name="menu_Start" height="22">
+		<ListContainerElement name="menu_Start" height="25">
 			<HorizontalLayout>
 				<Control
 					padding="5,4,5,0"
@@ -39,11 +44,10 @@
 					height="16"
 					bkimage="file='menu_fav.png'"
 				/>
-				<Label text="Start" width="155" aligh="left"/>
-				<Label text="Ctrl+E" aligh="right"/>
+				<Label text="Start                       Ctrl+E" mouse="false" textcolor="0XFFFFFFFF"/>
 			</HorizontalLayout>
 		</ListContainerElement>
-		<ListContainerElement name="menu_Stop" height="22">
+		<ListContainerElement name="menu_Stop" height="25">
 			<HorizontalLayout>
 				<Control
 					padding="5,4,5,0"
@@ -52,11 +56,10 @@
 					height="16"
 					bkimage="file='menu_fav.png'"
 				/>
-				<Label text="Stop" width="155" aligh="left"/>
-				<Label text="Ctrl+E" aligh="right"/>
+				<Label text="Stop                        Ctrl+E" mouse="false" textcolor="0XFFFFFFFF"/>
 			</HorizontalLayout>
 		</ListContainerElement>
-		<ListContainerElement name="menu_restart" height="22">
+		<ListContainerElement name="menu_restart" height="25">
 			<HorizontalLayout>
 				<Control
 					padding="5,4,5,0"
@@ -65,11 +68,10 @@
 					height="16"
 					bkimage="file='menu_fav.png'"
 				/>
-				<Label text="Restart" width="155" aligh="left"/>
-				<Label text="Ctrl+R" aligh="right"/>
+				<Label text="Restart                     Ctrl+R" mouse="false" textcolor="0XFFFFFFFF" />
 			</HorizontalLayout>
 		</ListContainerElement>
-		<ListContainerElement name="menu_captureFilter" height="22">
+		<ListContainerElement name="menu_captureFilter" height="25">
 			<HorizontalLayout>
 				<Control
 					padding="5,4,5,0"
@@ -78,11 +80,10 @@
 					height="16"
 					bkimage="file='menu_fav.png'"
 				/>
-				<Label text="Capture Filters..." width="155" aligh="left"/>
-				<Label text="Ctrl+R" aligh="right"/>
+				<Label text="Capture Filters...          Ctrl+R" mouse="false" textcolor="0XFFFFFFFF"/>
 			</HorizontalLayout>
 		</ListContainerElement>
-		<ListContainerElement name="menu_refresh" height="22">
+		<ListContainerElement name="menu_refresh" height="25">
 			<HorizontalLayout>
 				<Control
 					padding="5,4,5,0"
@@ -91,8 +92,7 @@
 					height="16"
 					bkimage="file='menu_fav.png'"
 				/>
-				<Label text="Refresh Interfaces" width="155" aligh="left"/>
-				<Label text="Ctrl+R" aligh="right"/>
+				<Label text="Refresh Interfaces          Ctrl+R" mouse="false" textcolor="0XFFFFFFFF"/>
 			</HorizontalLayout>
 		</ListContainerElement>
 	</List>

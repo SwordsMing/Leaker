@@ -190,6 +190,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\ParserCore.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\ProtocalDissector.cpp"
 				>
 			</File>
@@ -199,6 +203,10 @@
 			</File>
 			<File
 				RelativePath=".\ShowCore.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Utility.cpp"
 				>
 			</File>
 		</Filter>
@@ -224,6 +232,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\ParserCore.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Protocal.h"
 				>
 			</File>
@@ -245,6 +257,10 @@
 			</File>
 			<File
 				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Utility.h"
 				>
 			</File>
 		</Filter>
@@ -278,7 +294,47 @@
 			Name="controlExt"
 			>
 			<File
-				RelativePath=".\ControlExt\treeview.h"
+				RelativePath=".\ControlExt\BuilderCallbackEx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\ChildWnd.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\downloadmgr.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\treeview.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\UICheckBox.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\UICheckBox.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\UIWebBrowser.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\UIWebBrowser.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\Utils.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\Utils.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ControlExt\WebBrowserEventHandler.h"
 				>
 			</File>
 		</Filter>
@@ -286,7 +342,27 @@
 			Name="utility"
 			>
 			<File
+				RelativePath=".\utility\BlockingQueue.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\utility\CommonFileDlg.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\utility\CommonFileDlg.h"
+				>
+			</File>
+			<File
 				RelativePath=".\utility\CurrentThread.h"
+				>
+			</File>
+			<File
+				RelativePath=".\utility\Logging.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\utility\Logging.h"
 				>
 			</File>
 			<File
@@ -307,6 +383,14 @@
 			</File>
 			<File
 				RelativePath=".\utility\TimeStamp.h"
+				>
+			</File>
+			<File
+				RelativePath=".\utility\UtilityFun.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\utility\UtilityFun.h"
 				>
 			</File>
 		</Filter>
@@ -330,11 +414,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\widget\MenuCaptureWnd.cpp"
+				RelativePath=".\widget\QuitPromptWnd.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\widget\MenuCaptureWnd.h"
+				RelativePath=".\widget\QuitPromptWnd.h"
 				>
 			</File>
 			<File
@@ -345,6 +429,94 @@
 				RelativePath=".\widget\WidgetWnd.h"
 				>
 			</File>
+			<Filter
+				Name="Menu"
+				>
+				<File
+					RelativePath=".\widget\Menu.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuAnalyzeWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuAnalyzeWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuCaptureWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuCaptureWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuEditWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuEditWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuFileWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuFileWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuGoWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuGoWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuInternalsWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuInternalsWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuStatisticsWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuStatisticsWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuTelephonyWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuTelephonyWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuToolsWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuToolsWnd.h"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuViewWnd.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widget\MenuViewWnd.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 	</Files>
 	<Globals>

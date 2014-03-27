@@ -1,40 +1,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<Window size="789,180" sizebox="8,8,8,8" caption="0,0,0,30" bordersize="1" bordercolor="0xFFBC9068" mininfo="600,400" roundcorner="2,2">
-	<VerticalLayout bkcolor="0xFFCFCFCF" height="90">
-		<HorizontalLayout name="caption" height="23" bkimage="file='PopupWindowTop.png' source='0,0,141,27' corner='2,2,2,2'">
-			<Label name="titleLabel" text="Leaker: Capture Interfaces"
+<Window size="789,180" sizebox="8,8,8,8" caption="0,0,0,30" mininfo="600,400" roundcorner="2,2">
+<Font name="微软雅黑" size="14" bold="false" italic="false" />
+<Font name="微软雅黑" size="14" bold="true" italic="false" />
+	<VerticalLayout bkcolor="#FF000000" height="90" bordersize="1" bordercolor="#FF1B1B1B">
+		<HorizontalLayout name="caption" height="23">
+			<Label name="titleLabel" text="Leaker: Capture Interfaces" textcolor="0XFFFFFFFF" 
 				padding="8,4,3,0" height="20"
 			/>
-			<Control />
-			<HorizontalLayout width="80" inset="0,1,0,0">
-				<Button name="minBtn" width="40" height="20" normalimage="file='sys_dlg_min.png' source='52,0,78,17'" hotimage="file='sys_dlg_min.png' source='26,0,52,17'" pushedimage="file='sys_dlg_min.png' source='0,0,26,17'"/>
-				<Button name="closeBtn" width="40" height="20" normalimage="file='sys_dlg_close.png' source='90,0,135,17'" hotimage="file='sys_dlg_close.png' source='45,0,90,17'" pushedimage="file='sys_dlg_close.png' source='0,0,45,17'"/>
-			</HorizontalLayout>		
+			<HorizontalLayout padding="0,0,0,0" width="155" height="30">
+				<Control />
+				<Button 
+					name="minBtn"
+					width="29" height="18"
+					tooltip="最小化"
+					normalimage="file=&apos;min_btn.png&apos; dest=&apos;0,0,29,18&apos; source=&apos;0,0,29,18&apos;" 
+					hotimage="file=&apos;min_btn.png&apos; dest=&apos;0,0,29,18&apos; source=&apos;0,18,29,36&apos;" 
+					pushedimage="file=&apos;min_btn.png&apos; dest=&apos;0,0,29,18&apos; source=&apos;0,36,29,54&apos;" 
+				/>
+				<Button 
+					name="closeBtn" 
+					width="39" height="18"
+					tooltip="关闭"
+					normalimage="file=&apos;close_btn.png&apos; dest=&apos;0,0,39,18&apos; source=&apos;0,0,39,18&apos;" 
+					hotimage="file=&apos;close_btn.png&apos; dest=&apos;0,0,39,18&apos; source=&apos;0,18,39,36&apos;" 
+					pushedimage="file=&apos;close_btn.png&apos; dest=&apos;0,0,39,18&apos; source=&apos;0,36,39,54&apos;" 
+				/>
+			</HorizontalLayout>
 		</HorizontalLayout>
-		<List name="interfacesInfoLst" height="115" bkcolor="0xFFCFCFCF" bordersize="3" bkcolor="0xFFf5f8f9"
-			hscrollbar="true" vscrollbar="true" padding="3,3,3,3" itemalign="center" bordersize="1" bordercolor="#FFA6BACF">
+		<List name="interfacesInfoLst" height="115" 
+			hscrollbar="true" vscrollbar="true" 
+			padding="3,3,3,3" itemalign="center" 
+			>
 			<ListHeader>
-				<ListHeaderItem text="Device" aligh="center" font="1" width="150" />
-				<ListHeaderItem text="Description" aligh="center" font="1" width="150" />
-				<ListHeaderItem text="Ip" font="1" aligh="center" width="150" />
-				<ListHeaderItem text="Packets" aligh="center" font="1" width="150" />
-				<ListHeaderItem text="Packets/s" aligh="center" font="1" width="150" />
+				<ListHeaderItem text="Device" textcolor="0XFFFFFFFF" aligh="center" font="1" width="150" />
+				<ListHeaderItem text="Description" textcolor="0XFFFFFFFF" aligh="center" font="1" width="150" />
+				<ListHeaderItem text="Ip" font="1" textcolor="0XFFFFFFFF" aligh="center" width="150" />
+				<ListHeaderItem text="Packets" textcolor="0XFFFFFFFF" aligh="center" font="1" width="150" />
+				<ListHeaderItem text="Packets/s" textcolor="0XFFFFFFFF" aligh="center" font="1" width="150" />
 			</ListHeader>
 		</List>
+		<HorizontalLayout height="2" />
 		<HorizontalLayout height="25">
 			<Control />
 			<Button name="startBtn" text="Start" padding="10,0,0,0" width="75" height="25"
-				normalimage="file='white_btn.png' source='0,0,71,28' corner='2,2,2,5'"
-				hotimage="file='white_btn.png' source='0,28,71,56' corner='2,2,2,5'" 
-				pushedimage="file='white_btn.png' source='0,56,71,84' corner='2,2,2,5'"/>
+				bkcolor="#FF363636"
+				textcolor="0XFFFFFFFF"
+				bordersize="1"
+				borderround="3,3"
+				bordercolor="#FF92a6b8"/>
+			<HorizontalLayout width="4" />
 			<Button name="stopBtn"  text="Stop" width="75"  height="25"
-				normalimage="file='white_btn.png' source='0,0,71,28' corner='2,2,2,5'"
-				hotimage="file='white_btn.png' source='0,28,71,56' corner='2,2,2,5'" 
-				pushedimage="file='white_btn.png' source='0,56,71,84' corner='2,2,2,5'"/>
+				bkcolor="#FF363636"
+				textcolor="0XFFFFFFFF"
+				bordersize="1"
+				borderround="3,3"
+				bordercolor="#FF92a6b8"/>
+			<HorizontalLayout width="4" />
 			<Button name="optionsBtn" text="Option" width="75" height="25"
-				normalimage="file='white_btn.png' source='0,0,71,28' corner='2,2,2,5'"
-				hotimage="file='white_btn.png' source='0,28,71,56' corner='2,2,2,5'" 
-				pushedimage="file='white_btn.png' source='0,56,71,84' corner='2,2,2,5'"/>
+				bkcolor="#FF363636"
+				textcolor="0XFFFFFFFF"
+				bordersize="1"
+				borderround="3,3"
+				bordercolor="#FF92a6b8"/>
 		</HorizontalLayout>
 	</VerticalLayout>
 </Window>

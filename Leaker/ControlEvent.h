@@ -15,9 +15,12 @@
 #define DUI_ITEMACTIVATE   _T("itemactivate")
 #define DUI_ITEMCLICK      _T("itemclick")
 #define DUI_DROPDOWN       _T("dropdown")
+#define DUI_SETFOCES       _T("setfocus")
 #define DUI_KILLFOCUS      _T("killfocus")
 #define DUI_TIMER          _T("timer")
 #define DUI_WINDOWINIT     _T("windowinit")
 #define DUI_SHOWACTIVEX    _T("showactivex")
+#define DUI_MOUSEENTER     _T("mouseenter")
+#define DUI_MOUSELEAVE     _T("mouseleave")
 
 #endif

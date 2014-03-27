@@ -14,7 +14,5 @@ void g_IpAnalyse(PacketInfo* AnalysePacket);
 void g_TcpAnalyse(PacketInfo* AnalysePacket);
 void g_UdpAnalyse(PacketInfo* AnalysePacket);
 
-//判断一个地址是否为广播包
-bool g_isBroadcast(const unsigned char * mac);
 
 #endif

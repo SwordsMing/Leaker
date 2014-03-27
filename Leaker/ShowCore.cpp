@@ -92,9 +92,13 @@ void ShowCore::add(const PacketInfo *pkt){
 
 void ShowCore::addShowDetail(const PacketInfo * pkt){
 	
+#if 0
+	TRACE("start addShowDetail.....\n");
 	boost::mutex::scoped_lock lock(helperMutex_);
 	helperBuf_.push_back(pkt);
 	helperCondition_.notify_one();
+#endif
+	showDetail(pkt);
 }
 
 void ShowCore::show(const PacketInfo * pkt){
@@ -135,7 +139,7 @@ LPCTSTR ShowCore::GetItemText(DuiLib::CControlUI *pControl, int iIndex, int iSub
 
 void ShowCore::showDetail(const PacketInfo* pkt){
 
-		treeViewUI_->RemoveAll();
+	    treeViewUI_->RemoveAll();
 		hexViewUI_->Clear();
 		showTreeInfo(pkt);
 		showHexInfo(pkt);
@@ -171,10 +175,15 @@ void ShowCore::addTreeInfo(const RootedTree<std::string> * info){
 	while (!deque_.empty()){
 		TreeNode front_ = deque_.front();
 		deque_.pop_front();
+		//CTreeNodeUI * node = createTreeNode(front_.second->t_.c_str());
+		//treeViewUI_->Add(node);
+		//parent1 = node;
 		parent1 = treeViewUI_->AddNode(front_.second->t_.c_str(),front_.first);
 		child = front_.second->child_;
 		brother = front_.second->brother_;
 		while (child!= NULL){
+			//parent2 = createTreeNode(child->t_.c_str());
+			//parent1->Add(parent2);
 			parent2 = treeViewUI_->AddNode(child->t_.c_str(),parent1);
 			if(child->child_!= NULL){
 				deque_.push_back(std::pair<CTreeViewUI::Node*,HITEM>(parent2,child->child_));
@@ -182,6 +191,8 @@ void ShowCore::addTreeInfo(const RootedTree<std::string> * info){
 			child = child->brother_;
 		}
 		while (brother!= NULL){
+			//parent2 = createTreeNode(brother->t_.c_str());
+			//(front_.first)->Add(parent2);
 			parent2 = treeViewUI_->AddNode(brother->t_.c_str(),front_.first);
 			if(brother->child_!= NULL){
 				deque_.push_back(std::pair<CTreeViewUI::Node*,HITEM>(parent2,brother->child_));
@@ -256,3 +267,21 @@ void ShowCore::onItemSelect(TNotifyUI& msg){
 		treeViewUI_->SetChildVisible(node, !node->data()._child_visible);
 	}
 }
+
+#if 0
+CTreeNodeUI* ShowCore::createTreeNode(LPCTSTR str){
+
+	 CTreeNodeUI* pNodeTmp = new CTreeNodeUI;
+     pNodeTmp->SetItemTextColor(0xFFC8C6CB);
+     pNodeTmp->SetItemHotTextColor(0xFFC8C6CB);
+     pNodeTmp->SetSelItemTextColor(0xFFC8C6CB);
+    pNodeTmp->SetTag(1);
+     pNodeTmp->SetItemText(str);  
+     pNodeTmp->SetAttribute(_T("height"), _T("22"));
+     pNodeTmp->SetAttribute(_T("inset"), _T("7,0,0,0"));
+     pNodeTmp->SetAttribute(_T("itemattr"), _T("valign=\"vcenter\" font=\"4\""));
+     pNodeTmp->SetAttribute(_T("folderattr"), _T("width=\"0\" float=\"true\""));
+
+	 return pNodeTmp;
+}
+#endif

@@ -3,13 +3,13 @@
 #include <cassert>
 #include "ShowCore.h"
 #include "ProtocalManager.h"
+#include "ParserCore.h"
 
 CaptureCore::CaptureCore()
 	:start_(false),
 	openedAdapter_(NULL),
 	no_(0),
 	captureThread_(NULL),
-	parserThread_(NULL),
 	showCore_(NULL)
 {
 
@@ -31,12 +31,26 @@ void CaptureCore::startCapture(const char * name){
 	}
 	if(!filter_.IsEmpty())
 	{
-		setFilter(filter_);
+		applyFilter(filter_);
 	}
 	captureThread_ = new Thread(boost::bind(&CaptureCore::captureFunc,this),_T("CaptureThread"));
-	parserThread_  = new Thread(boost::bind(&CaptureCore::parserFunc,this),_T("ParserThread"));
 	captureThread_->startThread();
-	parserThread_->startThread();
+	ParserCore::instance().startParser();
+	showCore_->startShow();
+}
+
+void CaptureCore::startCapture(pcap_t * fp){
+	
+	assert(!start_);
+	start_ = true;
+	openedAdapter_ = fp;
+	if(openedAdapter_== NULL)
+	{
+		std::abort();
+	}
+	captureThread_ = new Thread(boost::bind(&CaptureCore::captureFunc,this),_T("CaptureThread"));
+	captureThread_->startThread();
+	ParserCore::instance().startParser();
 	showCore_->startShow();
 }
 
@@ -75,32 +89,6 @@ void CaptureCore::captureFunc(){
 			// offline capture
 		}
 	}
-	//for test CaptureThread exit
-	//::MessageBox(NULL,_T("CaptureThread exit"),_T("test"),MB_OK);
-}
-
-void CaptureCore::parserFunc(){
-
-	while (start_)
-	{
-		boost::mutex::scoped_lock lock(parserMutex_);
-		while (parserBuf_.empty())
-		{
-			parserCondition_.wait(lock);
-		}
-		if(!parserBuf_.empty())
-		{
-			PacketInfo *pkt = parserBuf_.front();
-			parserBuf_.pop_front();
-			parser(pkt);
-			showCore_->add(pkt);
-		}
-	}
-}
-
-void CaptureCore::parser(PacketInfo * packet){
-
-	ProtocalManager::instance().StartAnalyse(packet);
 }
 
 
@@ -116,15 +104,40 @@ void CaptureCore::dealCapturedPacket(const pcap_pkthdr *pkt_header, const u_char
 	packetInfo_->leftLength_ = pkt_header->caplen;
 	packetInfo_->len_ = pkt_header->len;
 	packetInfo_->caplen_ = pkt_header->caplen;
+	packetInfo_->header_ = *pkt_header;
 
-	allCapturedPacketBuf_.push_back(packetInfo_);
-
-	boost::mutex::scoped_lock lock(parserMutex_);
-	parserBuf_.push_back(packetInfo_);
-	parserCondition_.notify_one();
+	allCapturedPacketBuf_.push_back(packetInfo_);   //存储抓取到的数据包
+ 
+	ParserCore::instance().add(packetInfo_);        //将数据包投递到协议分析器
 }
 
 void CaptureCore::setFilter(const CStdString & filter){
-
 	
+	filter_ = filter;
+}
+
+void CaptureCore::applyFilter(const CStdString & filter){
+
+//	int netmask = 
+}
+
+void CaptureCore::setShowCore(ShowCore * showcore){
+
+	showCore_= showcore;
+	ParserCore::instance().setShowCore(showcore);
+}
+
+void CaptureCore::dumpFile(const char *filename){
+
+	pcap_dumper_t *dumpfile = pcap_dump_open(openedAdapter_,filename);
+	if(dumpfile== NULL){
+
+		//err 
+		return ;
+	}
+	std::vector<PacketInfo *>::iterator it_ = allCapturedPacketBuf_.begin();
+	for (;it_!= allCapturedPacketBuf_.end(); it_++){
+
+		pcap_dump((unsigned char *)dumpfile,&(*it_)->header_,(*it_)->pureData_);
+	}
 }
