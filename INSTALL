@@ -1,0 +1,2 @@
+This project replys on Boost,so you should install boost firstly.
+You can download Boost project from "http://www.boost.org",then add Boost to Leaker project.if "BOOST_HOME" is you Boost install directory,you shoud make sure your VS2008 can search "BOOST_HOME/boost" directory successfully,so the c++ include sentence like "#include <boost/*.hpp> can work well.
