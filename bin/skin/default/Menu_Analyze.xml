@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bktrans="true" size="275,380">
+<Font name="Î¢ÈíÑÅºÚ" size="14" bold="false" italic="false" />
+<Font name="Î¢ÈíÑÅºÚ" size="14" bold="true" italic="false" />
+<VerticalLayout bkcolor="#FF000000" bordersize="1" bordercolor="#FF1B1B1B">
+	<List 
+		itemendellipsis="true"
+		header="hidden"
+		itemhotbkcolor="#FF1B1B1B" 
+		itemselectedbkcolor="#FF151C2C"
+		itemtextcolor="#FFFFFFFF"
+		>
+		<ListContainerElement name="menu_5_0" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Display Filters..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement  name="menu_5_1" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Display Filters Macros..." mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_2" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Apply as Column" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_3" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Apply as Filter" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_4" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>	
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Prepare a Filter" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_5" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Enabled Protocals...        Shift+Ctrl+E"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_6" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Decode As..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_7" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="User Specified Decodes..." mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_8" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Follow TCP Stream" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_9" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Follow UDP Stream" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_10" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Follow SSL Stream"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_10" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Export SSL Session keys..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_11" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Export Info..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_5_12" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Conversation Filter"  mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+	</List>
+</VerticalLayout>
+</Window>

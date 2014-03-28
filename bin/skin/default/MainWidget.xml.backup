@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1024,770" sizebox="8,8,8,8" caption="0,0,0,30" bordercolor="#FF1B4876" bordersize="1" mininfo="1024,750" roundcorner="2,2">
+<Default name="VScrollBar" value="button1normalimage=&quot;file='scroll.png' source='0,0,16,16'&quot; button1hotimage=&quot;file='scroll.png' source='0,0,16,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scroll.png' source='0,16,16,32' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scroll.png' source='0,0,16,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scroll.png' source='0,32,16,48' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scroll.png' source='0,32,16,48' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scroll.png' source='0,48,16,64' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scroll.png' source='0,32,16,48' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scroll.png' source='0,64,16,80' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scroll.png' source='0,64,16,80' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;ffile='scroll.png' source='0,64,16,80' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scroll.png' source='0,64,16,80' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scroll.png' source='0,80,16,96' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scroll.png' source='0,80,16,96' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scroll.png' source='0,96,16,112' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scroll.png' source='0,80,16,96' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scroll.png' source='0,128,16,146' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scroll.png' source='0,128,16,146' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scroll.png' source='0,128,16,146' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scroll.png' source='0,128,16,146' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+	<VerticalLayout>
+		<VerticalLayout bkcolor="0xFFf5f8f9" height="140">
+			<HorizontalLayout name="caption" height="23" bkimage="file='PopupWindowTop.png' source='0,0,141,27' corner='2,2,2,2'">
+				<Label name="titleLabel" text="The Leaker Network Analyzer   [Leaker 1.0.0]"
+					padding="8,4,3,0"  width="890" height="20"
+				/>
+				<Control />
+				<HorizontalLayout width="120" inset="0,1,0,0">
+					<Button name="minBtn" width="40" height="20" normalimage="file='sys_dlg_min.png' source='52,0,78,17'" hotimage="file='sys_dlg_min.png' source='26,0,52,17'" pushedimage="file='sys_dlg_min.png' source='0,0,26,17'"/>
+					<Button name="maxBtn" visible="false" width="40" height="20" normalimage="file='sys_dlg_max.png' source='52,0,78,17'" hotimage="file='sys_dlg_max.png' source='26,0,52,18'" pushedimage="file='sys_dlg_max.png' source='0,0,26,17'"/>
+					<Button name="restoreBtn" width="40" height="20" normalimage="file='sys_dlg_restore.png' source='52,0,78,17'" hotimage="file='sys_dlg_restore.png' source='26,0,52,17'" pushedimage="file='sys_dlg_restore.png' source='0,0,26,17'" />
+					<Button name="closeBtn" width="40" height="20" normalimage="file='sys_dlg_close.png' source='90,0,135,17'" hotimage="file='sys_dlg_close.png' source='45,0,90,17'" pushedimage="file='sys_dlg_close.png' source='0,0,45,17'"/>
+				</HorizontalLayout>		
+			</HorizontalLayout>	
+			<HorizontalLayout name="menu" height="22" bkcolor="0XFFDEDEDE">
+				<Button name="File" text="File" width="40" height="20"/>
+				<Button name="Edit" text="Edit" width="40" height="20"/>
+				<Button name="View" text="View" width="40" height="20"/>
+				<Button name="Go"   text="Go"   width="30" height="20"/>
+				<Button name="Capture" text="Capture" width="60" height="20"/>
+				<Button name="Analyze" text="Analyze" width="60" height="20"/>
+				<Button name="Statistics" text="Statistics" width="70" height="20"/>
+				<Button name="Telephony" text="Telephony" width="70" height="20"/>
+				<Button name="Tools"     text="Tools" width="40" height="20"/>
+				<Button name="Internals" text="Internals" width="70" height="20"/>
+				<Button name="Help"  	 text="Help" width="40" height="20"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="mainTooBar" height="20" bkcolor="0xFFE5E5E5">
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text=""   />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text=""   />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+				<Button name="" text="" />
+			</HorizontalLayout>
+			<HorizontalLayout name="filterToolBar" height="25" bkcolor="0xFFE6E6FA">
+				<Label text="Filter:" width="50" padding="8,4,3,0" />
+				<Edit  name="filter"  width="300" bkcolor="#FFFFFFFF" height="20" 
+					nativebkcolor="#FFFFFFFF"
+					bordersize="1"
+					borderround="3,3"
+					bordercolor="#FF92a6b8"/>
+				<Button name="Expression" text="Expression..." width="100" textcolor="#FF252525"
+					align="center" height="23" padding="10,0,0,0"
+					normalimage="file='white_btn.png' source='0,0,71,28' corner='2,2,2,5'"
+					hotimage="file='white_btn.png' source='0,28,71,56' corner='2,2,2,5'" 
+					pushedimage="file='white_btn.png' source='0,56,71,84' corner='2,2,2,5'"/>
+				<Button name="Clear" text="Clear" width="40" textcolor="#FF252525"
+					align="center" height="23" padding="5,0,0,0"
+					normalimage="file='white_btn.png' source='0,0,71,28' corner='2,2,2,5'"
+					hotimage="file='white_btn.png' source='0,28,71,56' corner='2,2,2,5'" 
+					pushedimage="file='white_btn.png' source='0,56,71,84' corner='2,2,2,5'"/>
+				<Button name="Apply" text="Apply" width="40" textcolor="#FF252525"
+					align="center" height="23" padding="5,0,0,0"
+					normalimage="file='white_btn.png' source='0,0,71,28' corner='2,2,2,5'"
+					hotimage="file='white_btn.png' source='0,28,71,56' corner='2,2,2,5'" 
+					pushedimage="file='white_btn.png' source='0,56,71,84' corner='2,2,2,5'"/>
+				<Button name="Save" text="Save" width="40" textcolor="#FF252525"
+					align="center" height="23" padding="5,0,0,0"
+					normalimage="file='white_btn.png' source='0,0,71,28' corner='2,2,2,5'"
+					hotimage="file='white_btn.png' source='0,28,71,56' corner='2,2,2,5'" 
+					pushedimage="file='white_btn.png' source='0,56,71,84' corner='2,2,2,5'"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="logo" height="50" bkcolor="0XFF4169E1">
+				<Label text="Leaker:Network protocol analysis software based on c++"
+					textcolor="0XFFFFFFE0" font="1" padding="9,0,0,0"
+					/>
+			</HorizontalLayout>
+		</VerticalLayout>
+		<HorizontalLayout height="10" bkcolor="0xFFEDEDED" />
+		<VerticalLayout name="protocalInfoShowZone" visible="false">
+			<List name="mainCaptureLst" height="300" bkcolor="#FFFFFFFF" inset="0,0,0,0" itemshowhtml="true" bordersize="1" bordercolor="#FF1B4876" vscrollbar="true" hscrollbar="true" headerbkimage="file='list_header_bg.png'" itemalign="center" itembkcolor="#FFE2DDDF" 
+				itemaltbk="true" hscrollbar="false" menu="true" itemalign="center">
+				<ListHeader height="24" menu="true">
+					<ListHeaderItem text="No" font="1" width="50" dragable="false" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+					<ListHeaderItem text="Time" font="1" width="150" dragable="false" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+					<ListHeaderItem text="Source" font="1" width="160" dragable="false" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+					<ListHeaderItem text="Destination" font="1" width="160" dragable="false" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+					<ListHeaderItem text="Protocal" font="1" width="100" dragable="false" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+					<ListHeaderItem text="Length" font="1" width="100" dragable="false" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+					<ListHeaderItem text="Opcode" font="1" width="100" dragable="false" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+					<!--<ListHeaderItem text="Coloring Rule Name" font="1" width="210" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>-->
+					<ListHeaderItem text="Info" font="1" dragable="false" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+				</ListHeader>
+			</List>
+			<TreeView name="mainCaptureTree"  bkcolor="#FFF6F9FF" inset="1,1,1,1" bordercolor="#FF1B4876" bordersize="1" header="hidden" itemhotimage="file='tree_hot.bmp' corner='2,1,2,1' " itemselectedimage="file='tree_select.bmp' corner='2,1,2,1'" itemlinecolor="#FFE4EAF2" itemshowhtml="true" vscrollbar="true" hscrollbar="true" vscrollbarstyle="width=&quot;6&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot;">
+			</TreeView>
+			<RichEdit name="hexShow" vscrollbar="true" height="150" readonly="true" bkcolor="#FFF6F9FF" inset="1,1,1,1" bordercolor="#FF1B4876" bordersize="1">
+			</RichEdit>
+		</VerticalLayout>
+		<HorizontalLayout  name="mainPannelZone" bkcolor="0xFFEDEDED">
+			<List name="ListCapture" header="hidden">
+				<ListContainerElement name="header" height="22" inset="40,0,0,0">
+					<Label text="Capture" mouse="false" align="center"  textcolor="0xFFFFFFF0" 
+						width="100" padding="5,0,0,0" bkcolor="0xFF0000EE"/>
+				</ListContainerElement>
+				<ListContainerElement name="interfaceList" height="40">
+					<Label text="Interface List" mouse="false" align="center"  textcolor="0xFF050505" 
+						width="100" padding="5,0,0,0"/>
+				</ListContainerElement>
+				<ListContainerElement name="startCapture" height="40">
+					<Label text="Start" mouse="false" align="center"  textcolor="0xFF050505" 
+						width="100" padding="5,0,0,0"/>
+				</ListContainerElement>		
+				<ListContainerElement height="75" itemselectedbkcolor="0xFFC1E3FF"
+					bordersize="1" bordercolor="#FFA6BACF">
+					<List name="showInterfaceLst" header="hidden" 
+						vscrollbar="true">
+					</List>
+				</ListContainerElement>
+				<ListContainerElement name="captureOption" height="40" >
+					<Label text="Capture Options" mouse="false" align="center"  textcolor="0xFF050505" 
+							padding="8,4,3,0"/>
+				</ListContainerElement>		
+			</List>
+			<List name="ListFile" header="hidden">
+				<ListContainerElement name="header" height="22" inset="40,0,0,0">
+					<Label text="Files" align="center"  textcolor="0xFFFFFFF0"
+						mouse="flse" bkcolor="0xFF0000EE" />
+				</ListContainerElement>
+				<ListContainerElement name="openCapturedFile" height="40">
+					<Label text="Open" align="center"  textcolor="0xFFFFFFF0"
+						mouse="false" textcolor="0xFF050505"/>
+					</ListContainerElement>
+				<ListContainerElement name="header" height="20" inset="40,0,0,0">
+					<Label text="Open Recent Files" mouse="false" align="center"  
+						textcolor="0xFFFFFFF0" textcolor="0xFF050505"/>
+				</ListContainerElement>
+				<ListContainerElement name="recentFilesList">
+					<List name="recentFiles" header="hidden">
+					</List>
+				</ListContainerElement>
+			</List>
+			<List name="ListOnline" header="hidden">
+				<ListContainerElement name="onLineHeader" height="22" inset="40,0,0,0">
+					<Label text="Online" mouse="false" align="center"  textcolor="0xFFFFFFF0" 
+						padding="8,4,3,0" height="20" bkcolor="0xFF0000EE"/>
+				</ListContainerElement>
+				<ListContainerElement height="22" inset="40,0,0,0">
+					<Label text="Website" mouse="false" align="center"  
+						textcolor="0xFF050505"/>
+				</ListContainerElement>
+				<ListContainerElement height="22" inset="40,0,0,0">
+					<Label text="User's Guide" mouse="false" align="center"  
+						textcolor="0xFF050505"/>
+				</ListContainerElement>
+				<ListContainerElement height="22" inset="40,0,0,0">
+					<Label text="Security" mouse="false" align="center" 
+						textcolor="0xFF050505"/>
+				</ListContainerElement>
+			</List>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

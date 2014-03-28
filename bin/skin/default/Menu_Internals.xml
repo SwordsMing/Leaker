@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window bktrans="true" size="240,50" roundcorner="2,2" >
+<VerticalLayout bkcolor="#FF000000" bordersize="1" bordercolor="#FF1B1B1B"> 
+	<List name="menu_capture" 
+		itemendellipsis="true"
+		header="hidden"
+		itemhotbkcolor="#FF1B1B1B" 
+		itemselectedbkcolor="#FF151C2C"
+		itemtextcolor="#FFFFFFFF"
+		>
+		<ListContainerElement name="menu_Interfaces" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					width="16"
+					height="16"
+					mouse="false"/>
+				<Label text="Dissector Tables"  mouse="false" textcolor="0XFFFFFFFF" />
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_Options" height="25" padding="0,2,0,0">
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					width="16"
+					height="16"
+					mouse="false"
+				/>
+				<Label text="Supported Protocals(slow!)" mouse="false" textcolor="0XFFFFFFFF" />
+			</HorizontalLayout>
+		</ListContainerElement>
+	</List>
+	</VerticalLayout>
+</Window>

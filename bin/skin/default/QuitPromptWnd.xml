@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="789,180" sizebox="8,8,8,8" caption="0,0,0,30" mininfo="600,400" roundcorner="2,2">
+<Font name="宋体" size="10" bold="false" italic="false" />
+<Font name="宋体" size="20" bold="true" italic="false" />	
+	<VerticalLayout bkcolor="#FF000000" height="90" bordersize="1" bordercolor="#FF1B1B1B">
+		<HorizontalLayout name="caption" height="23">
+			<Label name="titleLabel" text="Leaker: Capture Interfaces" textcolor="0XFFFFFFFF" 
+				padding="8,4,3,0" height="20" width="742"
+			/>
+			<Button 
+				name="closeBtn" 
+				width="39" height="18"
+				tooltip="关闭"
+				normalimage="file=&apos;close_btn.png&apos; dest=&apos;0,0,39,18&apos; source=&apos;0,0,39,18&apos;" 
+				hotimage="file=&apos;close_btn.png&apos; dest=&apos;0,0,39,18&apos; source=&apos;0,18,39,36&apos;" 
+				pushedimage="file=&apos;close_btn.png&apos; dest=&apos;0,0,39,18&apos; source=&apos;0,36,39,54&apos;" 
+			/>
+		</HorizontalLayout>
+		<Control height="20" />
+		<Label text="Do you want to save the captured packets before quiting?"
+			padding="80,0,0,0"
+			font="1"
+			textcolor="0xFFFFFFFF"/>
+		<Control height="20" />	
+		<Label text="You captured packets will lost if you don't save them. " 
+			padding="80,0,0,0"
+			font="1"
+			textcolor="0xFFFFFFFF"/>
+		<Control height="50" />
+		<HorizontalLayout>
+			<Control />
+			<Button name="save" text="Save" width="120" height="25"
+				bkcolor="#FF363636"
+				textcolor="0XFFFFFFFF"
+				bordersize="1"
+				borderround="3,3"
+				bordercolor="#FF92a6b8"/>
+			<Control width="3" />	
+			<Button name="cancle" text="Cancle"  width="120" height="25"
+				bkcolor="#FF363636"
+				textcolor="0XFFFFFFFF"
+				bordersize="1"
+				borderround="3,3"
+				bordercolor="#FF92a6b8"/>
+			<Control width="3" />	
+			<Button name="nosave" text="Quit Without Saving" width="120" height="25"
+				bkcolor="#FF363636"
+				textcolor="0XFFFFFFFF"
+				bordersize="1"
+				borderround="3,3"
+				bordercolor="#FF92a6b8"/>
+			<Control width="5" />	
+		</HorizontalLayout>		
+	</VerticalLayout>
+</Window>

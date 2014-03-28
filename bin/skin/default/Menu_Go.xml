@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bktrans="true" size="275,275">
+<VerticalLayout bkcolor="#FF000000" bordersize="1" bordercolor="#FF1B1B1B">
+	<List 
+		itemendellipsis="true"
+		header="hidden"
+		itemhotbkcolor="#FF1B1B1B" 
+		itemselectedbkcolor="#FF151C2C"
+		itemtextcolor="#FFFFFFFF"
+		>
+		<ListContainerElement name="menu_Open" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Back                           Alt+Left"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement  height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Forward                       Alt+Right" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Go to packet...                  Ctrl+G" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Go to CorresPonding packet" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>	
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Previous Packet                 Ctrl+Up" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Next Packet                   Ctrl+Down"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="First Packet                  Ctrl+Home"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Last Packet                   Ctrl+End" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Previous Packet in Conversation Ctrl+," mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Next Packet in Conversation     Ctrl+." mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+	</List>
+</VerticalLayout>
+</Window>

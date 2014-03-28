@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bktrans="true" size="275,403">
+<Font name="微软雅黑" size="14" bold="false" italic="false" />
+<Font name="微软雅黑" size="14" bold="true" italic="false" />
+<VerticalLayout bkcolor="#FF000000" bordersize="1" bordercolor="#FF1B1B1B">
+	<List 
+		itemendellipsis="true"
+		header="hidden"
+		itemhotbkcolor="#FF1B1B1B" 
+		itemselectedbkcolor="#FF151C2C"
+		itemtextcolor="#FFFFFFFF"
+		>
+		<ListContainerElement name="menu_0_0" height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Open...                          Ctrl+O"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement  height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Open Recent" mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+					bkimage="file='treeview_a.png' source='0,0,16,16'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Merge..." mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Import From Hex Dump..." mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>	
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Close                            Ctrl+W" mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Save                             Ctrl+S"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Save As                    Shift+Ctrl+S"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="File Set" mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+					bkimage="file='treeview_a.png' source='0,0,16,16'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Export Specifiled Packets..." mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Export Packet Dissections... " mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+					bkimage="file='treeview_a.png' source='0,0,16,16'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Export Selected Packets Bytes...Ctrl+H"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Export SSL Session keys..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="Export Objects..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Print                            Ctrl+P"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement height="25" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Quit                             Ctrl+Q"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+	</List>
+</VerticalLayout>
+</Window>

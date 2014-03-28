@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bktrans="true" size="275,340">
+<Font name="Î¢ÈíÑÅºÚ" size="14" bold="false" italic="false" />
+<Font name="Î¢ÈíÑÅºÚ" size="14" bold="true" italic="false" />
+<VerticalLayout bkcolor="#FF000000" bordersize="1" bordercolor="#FF1B1B1B">
+	<List 
+		itemendellipsis="true"
+		header="hidden"
+		itemhotbkcolor="#FF1B1B1B" 
+		itemselectedbkcolor="#FF151C2C"
+		itemtextcolor="#FFFFFFFF"
+		>
+		<ListContainerElement name="menu_7_0" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="ANSI"  mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement  name="menu_7_1" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="GSM" mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_2" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="H.205..." mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_3" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="IAX2" mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_4" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>	
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="ISUP Message" mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_5" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="LTE"  mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_6" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="MTP3"  mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_7" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="RTP    " mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_8" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="RTSP" mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_9" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="RCTP" mouse="false" textcolor="0XFFFFFFFF"/>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_10" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="SIP..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_10" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="SMPPOprations"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_11" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					mouse="false"
+					width="16"
+					height="16"
+					padding="0,4,15,0"
+				/>
+				<Label text="UCP Message"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>	
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_12" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="VoIP Calls"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement name="menu_7_13" height="20" padding="0,2,0,0" >
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="WAP-WSP..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+	</List>
+</VerticalLayout>
+</Window>

@@ -1,0 +1,89 @@
+<html>
+<body  STYLE="OVERFLOW-X: hidden; OVERFLOW: hidden; background:#000000" oncontextmenu="return false" onselectstart="return false">
+<script language="JavaScript">
+
+if (true){
+
+Cols=50;
+Cl=48;//Space's are included so real length is 24!
+Cs=30;
+Ts=18;
+Tc='#008800';
+Tc1='#00ff00';
+MnS=20;
+MxS=20;
+I=Cs;
+Tcc=[1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N']
+Sp=new Array();S=new Array();Y=new Array();
+C=new Array();M=new Array();B=new Array();
+RC=new Array(Tcc);E=new Array();
+
+
+document.write("<div id='Container' style='position:absolute;top:0;left:-"+Cs+"'>");
+document.write("<div style='position:relative'>");
+for(i=0; i < Cols; i++){
+	S[i]=I+=Cs;
+	document.write("<div name='A' style='position:absolute;top:0;font-family:Arial;font-size:"
+	+Ts+"px;left:"+S[i]+";width:"+Ts+"px;height:0px;color:"+Tc+";visibility:hidden;font-weight:700;'></div>");
+}
+document.write("</div></div>");
+
+A = document.getElementsByName('A');
+
+if(A.length <=0 ){
+	var returns = [];
+	var getElementsByName = function(tag, name){
+		var e = document.getElementsByTagName(tag);
+		for(var i = 0; i < e.length; i++){
+			if(e[i].getAttribute("name") == name){
+				returns.push(e[i]);
+			}
+		}
+		return returns;
+	}
+	A = getElementsByName('div','A');
+}
+
+for(j=0; j < Cols; j++){
+	RC[j]=1+Math.round(Math.random()*Cl);
+	Y[j]=0;
+	Sp[j]=Math.round(MnS+Math.random()*MxS);
+	for(i=0; i < RC[j]; i++){
+		B[i]='';
+		C[i]=Math.round(Math.random()*1)+' ';
+		M[j]=B[0]+=C[i];
+	}
+}
+function Cycle(){
+	Container.style.top=window.document.body.scrollTop;
+	for (i=0; i < Cols; i++){
+	var r = Math.floor(Math.random()*Tcc.length);
+	E[i] = '<font color='+Tc1+'>'+Tcc[r]+'</font>';
+	Y[i]+=Sp[i];
+
+	if (Y[i] > window.document.body.clientHeight){
+		for(i2=0; i2 < Cols; i2++){
+			RC[i2]=1+Math.round(Math.random()*Cl);
+			for(i3=0; i3 < RC[i2]; i3++){
+				B[i3]='';
+				C[i3]=Math.round(Math.random()*1)+' ';
+				C[Math.floor(Math.random()*i2)]=' '+' ';
+				M[i]=B[0]+=C[i3];
+				Y[i]=-Ts*M[i].length/1.5;
+				A[i].style.visibility='visible';
+			}
+			Sp[i]=Math.round(MnS+Math.random()*MxS);
+		}
+	}
+	A[i].style.top=Y[i];
+	A[i].innerHTML=M[i]+' '+E[i]+' ';
+	}
+	setTimeout('Cycle()',45)
+}
+Cycle();
+
+}
+
+</script>
+</body>
+</html>

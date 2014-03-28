@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window bktrans="true" size="300,500">
+<Font name="Î¢ÈíÑÅºÚ" size="14" bold="false" italic="false" />
+<Font name="Î¢ÈíÑÅºÚ" size="14" bold="true" italic="false" />
+<VerticalLayout bkcolor="#FF000000" bordersize="1" bordercolor="#FF1B1B1B">
+	<List 
+		itemendellipsis="true"
+		header="hidden"
+		itemhotbkcolor="#FF1B1B1B" 
+		itemselectedbkcolor="#FF151C2C"
+		itemtextcolor="#FFFFFFFF">
+		
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Copy                                  Ctrl+C"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+					bkimage="file='menu_fav.png'"
+				/>
+				<Label text="Find Packet...                        Ctrl+F"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+
+				/>
+				<Label text="Find Next...                          Ctrl+N"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Find Previous...                      Ctrl+B"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>	
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Mark/Unmark Packet...                 Ctrl+M"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Mark All Displayed Packets...   Shift+Ctrl+M"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Unmark All Displayed Packets...   Ctrl+ALT+M"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Next Mark                       Shift+Ctrl+N"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Previous Mark                   Shift+Ctrl+B"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Ignore/Unignore Packet                Ctrl+D"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Ignore All Displayed Packets... Shift+Ctrl+D"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Unignore All Packets...             Ctrl+ALT+D"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Set/Unset Time Reference              Ctrl+T"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Unset All Time Reference          Ctrl+ALT+T"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Next Time Reference               Ctrl+ALT+N"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Previous Time Reference           Ctrl+ALT+B"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Time Shift...                   Shift+Ctrl+T"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Packet Comment..."  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Configuration Profiles...       Shift+Ctrl+A"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+		<ListContainerElement>
+			<HorizontalLayout>
+				<Control
+					padding="5,4,5,0"
+					mouse="false"
+					width="16"
+					height="16"
+				/>
+				<Label text="Preferences...                  Shift+Ctrl+P"  mouse="false" textcolor="0XFFFFFFFF"/>
+			</HorizontalLayout>
+		</ListContainerElement>
+	</List>
+</VerticalLayout>	
+		
