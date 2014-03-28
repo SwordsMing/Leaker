@@ -78,7 +78,7 @@ void MainWidget::init(){
 	 CWebBrowserUI* pWebBrowser = static_cast<CWebBrowserUI*>(paintManager_.FindControl(_T("HackerWnd")));
 	 pWebBrowser->DoCreateControl();
      if( pWebBrowser ) {
-		 std::string path = utility::getResourceDir() + _T("skin\\hacker.html");
+		 std::string path = utility::getResourceDir() + _T("\\skin\\default\\hacker.html");
          pWebBrowser->Navigate2(path.c_str()); 
      }
 }
@@ -194,7 +194,7 @@ void MainWidget::toShowMode(){
 	//º”‘ÿæ≤Ã¨Õ¯“µ
 	 CWebBrowserUI* pWebBrowser = static_cast<CWebBrowserUI*>(paintManager_.FindControl(_T("HackerWnd")));
      if( pWebBrowser ) {
-		 std::string path = utility::getResourceDir() + _T("skin\\static.html");
+		 std::string path = utility::getResourceDir() + _T("\\skin\\default\\static.html");
          pWebBrowser->Navigate2(path.c_str()); 
      }	
 	hack->SetVisible(false);
