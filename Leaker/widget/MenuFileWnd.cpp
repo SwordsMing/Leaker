@@ -33,13 +33,10 @@ LRESULT MenuFileWnd::MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, boo
 
 void MenuFileWnd::onOpenFile(TNotifyUI & msg){
 
-	/*MainWidget * tmp = owner_;
-	CommonFileDlg dlg(tmp->GetHWND());
-	std::string fileName = dlg.getOpenFileName();
-	if(fileName!= _T(" ")){
-		tmp->openDumpFile(fileName.c_str());
-	}*/
-	::SendMessage(owner_->GetHWND(),WM_OPENFILE,0,0);
+	//此处不能用SendMessage同步发送消息，否则会引发程序崩溃
+	//具体原因是在弹出“对话框窗口”时，原菜单窗口因失去焦点而导致
+	//"delete this，再对这个类的任何函数调用操作会导致bug
+	::PostMessage(owner_->GetHWND(),WM_OPENFILE,0,0);
 }
 
 LRESULT MenuFileWnd::onKillFocus(UINT uMsg, WPARAM wParam, LPARAM lParam){
