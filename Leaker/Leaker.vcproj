@@ -289,6 +289,10 @@
 				RelativePath=".\plugin\PluginManager.h"
 				>
 			</File>
+			<Filter
+				Name="Lua"
+				>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="controlExt"
