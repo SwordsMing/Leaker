@@ -9,7 +9,9 @@
 class CommonFileDlg:boost::noncopyable
 {
 public:
-	explicit CommonFileDlg(HWND hwnd):hWnd_(hwnd){}
+	explicit CommonFileDlg(HWND hwnd)
+		:hWnd_(hwnd)
+	{}
 	std::string getOpenFileName();
 	std::string getSaveFileName();
 private:
@@ -17,6 +19,7 @@ private:
 	OPENFILENAME fileNameInfo_;
 	HWND hWnd_;
 	char buf_[MAX_PATH];
+	static const char filterBuf_[];
 };
 
 

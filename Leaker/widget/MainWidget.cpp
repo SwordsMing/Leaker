@@ -274,7 +274,6 @@ void MainWidget::mouseEnter(DuiLib::TNotifyUI & msg){
 			curWnd_->Close();
 			curWnd_= NULL;
 		}
-		
 	}
 	createMenuWnd(msg);
 }
@@ -301,7 +300,15 @@ void MainWidget::openDumpFile(const char *file){
 
 void MainWidget::saveToDumpFile(){
 	
-
+	if(start_){
+		CaptureCore::instance().stopCapture();
+		start_ = false;  
+	}
+	CommonFileDlg dlg(GetHWND());
+	std::string name = dlg.getSaveFileName();
+	if(!name.empty()){
+		CaptureCore::instance().dumpFile(name.c_str());
+	}
 }
 //
 

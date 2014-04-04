@@ -1,5 +1,7 @@
 #include "CommonFileDlg.h"
 
+const char CommonFileDlg::filterBuf_[] = "pcap file(*.pcap)\0*.pcap\0";
+
 void CommonFileDlg::init(){
 
 	::ZeroMemory(&fileNameInfo_,sizeof(fileNameInfo_));
@@ -10,7 +12,7 @@ void CommonFileDlg::init(){
 	fileNameInfo_.hwndOwner = hWnd_;
 	fileNameInfo_.nMaxFile = sizeof(buf_);
 	fileNameInfo_.nFilterIndex    = 1;  
-    fileNameInfo_.lpstrFileTitle  = NULL;  
+    fileNameInfo_.lpstrFileTitle  = (LPSTR)filterBuf_; 
     fileNameInfo_.nMaxFileTitle   = 0;  
     fileNameInfo_.lpstrInitialDir = NULL;  
     fileNameInfo_.Flags = OFN_EXPLORER | OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST; 
@@ -22,7 +24,7 @@ std::string CommonFileDlg::getOpenFileName(){
 	if(::GetOpenFileName(&fileNameInfo_)){
 		return std::string(buf_);
 	}
-	return std::string(" ");
+	return std::string("");
 }
 
 std::string CommonFileDlg::getSaveFileName(){
@@ -31,5 +33,5 @@ std::string CommonFileDlg::getSaveFileName(){
 	if(::GetSaveFileName(&fileNameInfo_)){
 		return std::string(buf_);
 	}
-	return std::string(" ");
+	return std::string("");
 }

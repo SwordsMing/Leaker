@@ -138,6 +138,7 @@ void CaptureCore::dumpFile(const char *filename){
 	std::vector<PacketInfo *>::iterator it_ = allCapturedPacketBuf_.begin();
 	for (;it_!= allCapturedPacketBuf_.end(); it_++){
 
-		pcap_dump((unsigned char *)dumpfile,&(*it_)->header_,(*it_)->pureData_);
+		pcap_dump((unsigned char *)dumpfile,&((*it_)->header_),(*it_)->pureData_);
 	}
+	pcap_dump_flush(dumpfile);
 }
