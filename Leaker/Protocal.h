@@ -214,8 +214,8 @@ typedef struct tagPacketInfo
 {
 	unsigned long no_;
 	struct timeval ts_;
-	unsigned char * pureData_;
-	unsigned char * data_;
+	const unsigned char * pureData_;
+	const unsigned char * data_;
 	unsigned int leftLength_;
 	unsigned int len_;
 	unsigned int caplen_;

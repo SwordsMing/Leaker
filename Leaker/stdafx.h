@@ -20,11 +20,10 @@ using namespace DuiLib;
 #   ifdef _UNICODE
 #	 pragma comment(lib, "..\\bin\\DuiLib_ud.lib")
 #   else
-#       pragma comment(lib, "..\\bin\\DuiLib_d.lib")
+#       pragma comment(lib, "..\\bin\\DuiLib.lib")
 #		pragma comment(lib,"libboost_thread-vc90-mt-gd-1_55.lib")
 #   endif
 #else
-#	pragma comment(lib,"libboost_thread-vc90-mt-1_55.lib")
 #   ifdef _UNICODE
 #       pragma comment(lib, "..\\bin\\DuiLib_u.lib")
 #   else

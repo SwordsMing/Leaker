@@ -23,10 +23,12 @@ void CaptureCore::startCapture(const char * name){
 	assert(!start_);
 	start_ = true;
 	char errbuf[PCAP_ERRBUF_SIZE];
+	memset(errbuf,0,sizeof(errbuf));
 	//打开设备
 	openedAdapter_ = pcap_open_live(name,65536,0,1000,errbuf);
 	if(openedAdapter_== NULL)
 	{
+		::MessageBox(NULL,errbuf,NULL,MB_OK);
 		std::abort();
 	}
 	if(!filter_.IsEmpty())

@@ -207,7 +207,7 @@ void ShowCore::addTreeInfo(const RootedTree<std::string> * info){
 void ShowCore::showHexInfo(const PacketInfo *pkt){
 
 	unsigned int nLength = pkt->caplen_;
-	unsigned char * p = pkt->pureData_;
+	const unsigned char * p = pkt->pureData_;
     unsigned char temp[16];
 	int row = nLength / 16;
 	int left = nLength % 16;

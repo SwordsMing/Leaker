@@ -17,7 +17,8 @@ class PluginManager: public Singleton<PluginManager>
 public:
 	PluginManager();
 	~PluginManager();
-	void registerPlugins();
+	void registerCPlugins();
+	void registerLuaPlugins();
 private:
 	std::vector<HMODULE> plugins_;
 	void registerModule(HMODULE);

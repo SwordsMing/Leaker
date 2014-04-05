@@ -11,7 +11,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
     if( FAILED(Hr) ) return 0;
 
 	//加载协议解析插件
-	PluginManager::instance().registerPlugins();
+	PluginManager::instance().registerCPlugins();
+	PluginManager::instance().registerLuaPlugins();
 
     MainWidget* pMain = new MainWidget();
     if( pMain == NULL ) return 0;
