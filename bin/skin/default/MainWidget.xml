@@ -143,7 +143,7 @@
 		<HorizontalLayout height="10" bkcolor="#FF000000" />
 		<VerticalLayout name="protocalInfoShowZone" height="650" visible="false">
 			<List name="mainCaptureLst" height="300" bkcolor="#FF000000" inset="0,0,0,0" itemshowhtml="true" bordersize="1" bordercolor="#FF1B4876" vscrollbar="true" hscrollbar="true"  itemalign="center" itembkcolor="#FF000000" 
-				itemtextcolor="#FFFFFFFF" itemhotbkcolor="#FF1B1B1B"  itemselectedbkcolor="#FF000000" itemselectedtextcolor="#FFFFFFFF">
+				itemtextcolor="#FFFFFFFF" itemhotbkcolor="#FFFFFFFF"  itemselectedbkcolor="#FF000000" itemselectedtextcolor="#FFFFFFFF">
 				<ListHeader height="24" menu="true">
 					<ListHeaderItem text="No" textcolor="#FFFFFFFF" font="1" width="50" dragable="false"  sepwidth="1"/>
 					<ListHeaderItem text="Time" textcolor="#FFFFFFFF" font="1" width="150" dragable="false"  sepwidth="1"/>
@@ -156,7 +156,7 @@
 					<ListHeaderItem text="Info" textcolor="#FFFFFFFF" font="1" dragable="false" sepwidth="1"/>
 				</ListHeader>
 			</List>
-			<TreeView name="mainCaptureTree" height="150" bkcolor="#FF000000" bordersize="1" itemshowhtml="true" bordercolor="#FFDBDBDB" itemtextcolor="#FFFFFFFF" itemhotbkcolor="#FF1B1B1B"  itemselectedbkcolor="#FF000000" itemselectedtextcolor="#FFFFFFFF" vscrollbar="true" hscrollbar="true" >
+			<TreeView name="mainCaptureTree" height="150" bkcolor="#FF000000" bordersize="1" itemshowhtml="true" bordercolor="#FFDBDBDB" itemtextcolor="#FFFFFFFF" itemhotbkcolor="#FFFFFFFF"  itemselectedbkcolor="#FF000000" itemselectedtextcolor="#FFFFFFFF" vscrollbar="true" hscrollbar="true" >
 			</TreeView>
 			<RichEdit name="hexShow" vscrollbar="true" readonly="true" bkcolor="#FF000000" textcolor="#FFFFFFFF" inset="1,1,1,1" bordercolor="#FF1B4876" bordersize="1">
 			</RichEdit>
