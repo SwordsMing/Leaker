@@ -1,10 +1,11 @@
 #include "PluginManager.h"
 #include <string>
 #include "LuaState.h"
+#include "LuaAux.h"
 
 PluginManager::PluginManager(){
 	
-
+	registerAllCFun(LuaState::instance().L); //向LUA注册所有的LUA函数
 }
 
 PluginManager::~PluginManager(){

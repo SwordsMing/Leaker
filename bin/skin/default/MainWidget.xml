@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<Window size="1024,770" sizebox="8,8,8,8" caption="0,0,0,30" bordercolor="#FF1B4876" bordersize="1" mininfo="1024,750" roundcorner="2,2">
+<Window size="1024,770" sizebox="8,8,8,8" caption="0,0,0,30" bordercolor="#FF1B4876" bordersize="1" mininfo="1024,500" roundcorner="2,2">
 <Font name="微软雅黑" size="14" bold="false" italic="false" />
 <Font name="微软雅黑" size="14" bold="true" italic="false" />
 <Font name="微软雅黑" size="10" bold="false" />

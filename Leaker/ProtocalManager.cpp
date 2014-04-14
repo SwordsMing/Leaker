@@ -119,7 +119,13 @@ void ProtocalManager::doluaFunc(unsigned long key,PacketInfo* RawPacket){
 	//调用LUA函数，先将LUA函数名入栈，再将参数入栈，最后产生调用
 	lua_getglobal(LuaState::instance().L,name.c_str());
 	lua_pushlightuserdata(LuaState::instance().L,(void*)RawPacket);
-	lua_call(LuaState::instance().L,1,0);
+	//保护模式下运行，不用lua_call
+	int err = lua_pcall(LuaState::instance().L,1,0,0);
+	if(err!= 0){//发生错误
+		const char * errstr = lua_tostring(LuaState::instance().L,-1);
+		TRACE("%s",errstr);
+		lua_pop(LuaState::instance().L,1);
+	}
 }
 
 //向协议管理器注册协议信息
